@@ -1,0 +1,127 @@
+﻿<Window x:Class="UT3_Ac7_Formulario.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UT3_Ac7_Formulario"
+        mc:Ignorable="d"
+        Title="Formulario" MinHeight="550" MinWidth="850" Height="550" Width="850"
+        Icon="form.ico">
+    <DockPanel>
+        <TextBlock Text="Formulario"
+                   FontSize="40"
+                   FontWeight="Bold"
+                   DockPanel.Dock="Top"
+                   HorizontalAlignment="Center"
+                   Margin="5"/>
+        <DockPanel LastChildFill="False" DockPanel.Dock="Bottom" Margin="5">
+            <TextBlock Text="Vladis"
+                       FontSize="20"
+                       FontStyle="Italic"
+                       DockPanel.Dock="Left" />
+            <Button Content="Cancelar"
+                    DockPanel.Dock="Right" />
+            <Button Content="Aceptar"
+                    DockPanel.Dock="Right" />
+        </DockPanel>
+        <Image Source="foto.jpg" 
+               DockPanel.Dock="Right"
+               Margin="10"/>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Vertical" Margin="5" >
+                <Border BorderThickness="3"
+                        BorderBrush="Black"
+                        CornerRadius="5"
+                        Background="LightBlue"
+                        Padding="5"
+                        Margin="0,0,0,10">
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="5" />
+                    </Border.Effect>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="6*" />
+                            <ColumnDefinition Width="0.5*" />
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Text="Nombre"
+                                   Grid.Row="0"
+                                   Grid.Column="0"
+                                   Margin="5" />
+                        <TextBox Grid.Row="0"
+                                 Grid.Column="1"
+                                 Margin="5" />
+                        <Image Source="info.png"
+                               Width="20"
+                               Grid.Row="0"
+                               Grid.Column="3"
+                               Margin="5" 
+                               ToolTip="Máximo 100 caracteres"/>
+
+                        <TextBlock Text="Apellido"
+                                   Grid.Row="1"
+                                   Grid.Column="0"
+                                   Margin="5" />
+                        <TextBox Grid.Row="1"
+                                 Grid.Column="1"
+                                 Margin="5" />
+                        <Image Source="info.png"
+                               Width="20"
+                               Grid.Row="1"
+                               Grid.Column="3"
+                               Margin="5"
+                               ToolTip="Número entre 0 y 100"/>
+
+                        <TextBlock Text="Dirección"
+                                   Grid.Row="2"
+                                   Grid.Column="0"
+                                   Margin="5" />
+                        <TextBox Grid.Row="2"
+                                 Grid.Column="1"
+                                 Margin="5" />
+                        <Image Source="info.png"
+                               Width="20"
+                               Grid.Row="2"
+                               Grid.Column="3"
+                               Margin="5"
+                               ToolTip="Incluir el código postal"/>
+                    </Grid>
+                </Border>
+                <Border BorderThickness="3"
+                        BorderBrush="Black"
+                        CornerRadius="5"
+                        Background="LightYellow"
+                        Padding="5"
+                        Margin="0,10,0,0">
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="5" />
+                    </Border.Effect>
+                    <StackPanel Orientation="Horizontal" >
+                        <GroupBox Header="Aficiones" Margin="5,5,10,5" Padding="10" Width="200">
+                            <StackPanel Orientation="Vertical">
+                                <CheckBox Content="Hacer deporte" />
+                                <CheckBox Content="Viajar" />
+                                <CheckBox Content="Ver series" />
+                                <CheckBox Content="Leer comics" />
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="Estado civil" Margin="10,5,5,5" Padding="10" Width="200">
+                            <StackPanel Orientation="Vertical">
+                                <RadioButton Content="Soltero" IsChecked="True"/>
+                                <RadioButton Content="Casado" />
+                                <RadioButton Content="Divorciado" />
+                                <RadioButton Content="Viudo" />
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+    </DockPanel>
+</Window>
