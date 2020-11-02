@@ -20,108 +20,129 @@
                        FontStyle="Italic"
                        DockPanel.Dock="Left" />
             <Button Content="Cancelar"
-                    DockPanel.Dock="Right" />
+                    DockPanel.Dock="Right"
+                    Width="100"
+                    Margin="5,0,5,0"/>
             <Button Content="Aceptar"
-                    DockPanel.Dock="Right" />
+                    DockPanel.Dock="Right" 
+                    Width="100"/>
         </DockPanel>
-        <Image Source="foto.jpg" 
-               DockPanel.Dock="Right"
-               Margin="10"/>
-        <StackPanel Orientation="Vertical">
-            <StackPanel Orientation="Vertical" Margin="5" >
-                <Border BorderThickness="3"
-                        BorderBrush="Black"
-                        CornerRadius="5"
-                        Background="LightBlue"
-                        Padding="5"
-                        Margin="0,0,0,10">
-                    <Border.Effect>
-                        <DropShadowEffect ShadowDepth="5" />
-                    </Border.Effect>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition />
-                            <RowDefinition />
-                            <RowDefinition />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition Width="6*" />
-                            <ColumnDefinition Width="0.5*" />
-                        </Grid.ColumnDefinitions>
 
-                        <TextBlock Text="Nombre"
-                                   Grid.Row="0"
-                                   Grid.Column="0"
-                                   Margin="5" />
-                        <TextBox Grid.Row="0"
-                                 Grid.Column="1"
-                                 Margin="5" />
-                        <Image Source="info.png"
-                               Width="20"
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Vertical">
+            <Border BorderThickness="3"
+                    BorderBrush="Black"
+                    CornerRadius="5"
+                    Background="LightBlue"
+                    Padding="5"
+                    Margin="5,10,5,10">
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="5" />
+                </Border.Effect>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="6*" />
+                        <ColumnDefinition Width="40" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Nombre"
                                Grid.Row="0"
-                               Grid.Column="3"
-                               Margin="5" 
-                               ToolTip="Máximo 100 caracteres"/>
+                               Grid.Column="0"
+                               Margin="5" />
+                    <TextBox Grid.Row="0"
+                             Grid.Column="1"
+                             Margin="5" />
+                    <Image Source="info.png"
+                           Width="20"
+                           Grid.Row="0"
+                           Grid.Column="3"
+                           Margin="5"
+                           ToolTip="Máximo 100 caracteres" />
 
-                        <TextBlock Text="Apellido"
-                                   Grid.Row="1"
-                                   Grid.Column="0"
-                                   Margin="5" />
-                        <TextBox Grid.Row="1"
-                                 Grid.Column="1"
-                                 Margin="5" />
-                        <Image Source="info.png"
-                               Width="20"
+                    <TextBlock Text="Edad"
                                Grid.Row="1"
-                               Grid.Column="3"
-                               Margin="5"
-                               ToolTip="Número entre 0 y 100"/>
+                               Grid.Column="0"
+                               Margin="5" />
+                    <TextBox Grid.Row="1"
+                             Grid.Column="1"
+                             Margin="5" />
+                    <Image Source="info.png"
+                           Width="20"
+                           Grid.Row="1"
+                           Grid.Column="3"
+                           Margin="5"
+                           ToolTip="Número entre 0 y 100" />
 
-                        <TextBlock Text="Dirección"
-                                   Grid.Row="2"
-                                   Grid.Column="0"
-                                   Margin="5" />
-                        <TextBox Grid.Row="2"
-                                 Grid.Column="1"
-                                 Margin="5" />
-                        <Image Source="info.png"
-                               Width="20"
+                    <TextBlock Text="Dirección"
                                Grid.Row="2"
-                               Grid.Column="3"
-                               Margin="5"
-                               ToolTip="Incluir el código postal"/>
-                    </Grid>
-                </Border>
-                <Border BorderThickness="3"
-                        BorderBrush="Black"
-                        CornerRadius="5"
-                        Background="LightYellow"
-                        Padding="5"
-                        Margin="0,10,0,0">
-                    <Border.Effect>
-                        <DropShadowEffect ShadowDepth="5" />
-                    </Border.Effect>
-                    <StackPanel Orientation="Horizontal" >
-                        <GroupBox Header="Aficiones" Margin="5,5,10,5" Padding="10" Width="200">
-                            <StackPanel Orientation="Vertical">
-                                <CheckBox Content="Hacer deporte" />
-                                <CheckBox Content="Viajar" />
-                                <CheckBox Content="Ver series" />
-                                <CheckBox Content="Leer comics" />
-                            </StackPanel>
-                        </GroupBox>
-                        <GroupBox Header="Estado civil" Margin="10,5,5,5" Padding="10" Width="200">
-                            <StackPanel Orientation="Vertical">
-                                <RadioButton Content="Soltero" IsChecked="True"/>
-                                <RadioButton Content="Casado" />
-                                <RadioButton Content="Divorciado" />
-                                <RadioButton Content="Viudo" />
-                            </StackPanel>
-                        </GroupBox>
-                    </StackPanel>
-                </Border>
+                               Grid.Column="0"
+                               Margin="5" />
+                    <TextBox Grid.Row="2"
+                             Grid.Column="1"
+                             Margin="5" />
+                    <Image Source="info.png"
+                           Width="20"
+                           Grid.Row="2"
+                           Grid.Column="3"
+                           Margin="5"
+                           ToolTip="Incluir el código postal" />
+                </Grid>
+            </Border>
+            <Border BorderThickness="3"
+                    BorderBrush="Black"
+                    CornerRadius="5"
+                    Background="LightYellow"
+                    Padding="5"
+                    Margin="5,10,5,0">
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="5" />
+                </Border.Effect>
+                <StackPanel Orientation="Horizontal">
+                    <GroupBox Header="Aficiones"
+                              Margin="5,5,10,5"
+                              Padding="10"
+                              Width="200">
+                        <StackPanel Orientation="Vertical">
+                            <CheckBox Content="Hacer deporte" />
+                            <CheckBox Content="Viajar" />
+                            <CheckBox Content="Ver series" />
+                            <CheckBox Content="Leer comics" />
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox Header="Estado civil"
+                              Margin="10,5,5,5"
+                              Padding="10"
+                              Width="200">
+                        <StackPanel Orientation="Vertical">
+                            <RadioButton Content="Soltero"
+                                         IsChecked="True" />
+                            <RadioButton Content="Casado" />
+                            <RadioButton Content="Divorciado" />
+                            <RadioButton Content="Viudo" />
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </Border>
             </StackPanel>
-        </StackPanel>
+            <Image Source="foto.jpg"
+                   Margin="10" 
+                   Grid.Column="2"/>
+
+        </Grid>
     </DockPanel>
 </Window>
+
